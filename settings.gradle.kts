@@ -15,4 +15,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "onfit-clone"
 include(":app")
- 
+include(":domain")
+include(":data")
+include(":ui")
