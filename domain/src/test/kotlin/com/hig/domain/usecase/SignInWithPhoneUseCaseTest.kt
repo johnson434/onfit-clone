@@ -5,11 +5,12 @@ import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import kotlin.test.assertFailsWith
+import kotlin.test.assertTrue
 
 class SignInWithPhoneUseCaseTest {
     @Test
     fun `유효한 휴대폰 번호를 입력했을 때, 에러를 던지지 않음`() {
-        val signInWithPhoneUseCase = SignInWithPhoneUseCase(mockk())
+        val signInWithPhoneUseCase = SignInWithPhoneUseCase(mockk(relaxed = true))
         val phoneNums = """
             010-123-5678
             010-1234-5678
@@ -19,7 +20,7 @@ class SignInWithPhoneUseCaseTest {
 
         runTest {
             phoneNums.forEach { phoneNumber ->
-                signInWithPhoneUseCase(phoneNumber = phoneNumber)
+                assertTrue(message = "phoneNumber : $phoneNumber", actual = signInWithPhoneUseCase(phoneNumber = phoneNumber).isSuccess)
             }
         }
     }
