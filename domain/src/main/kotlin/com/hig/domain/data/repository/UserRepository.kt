@@ -7,7 +7,7 @@ interface UserRepository {
     fun signInWithGoogle(email: String)
     fun signUpWithPhone(phone: String)
     fun signUpWithGoogle(email: String)
-    fun getUserInfo(userNo: String): UserDto
+    fun getUserInfo(userNo: String): UserDto?
     fun putUserInfo(userNo: String, userName: String, userPhotoUrl: String)
     fun patchUserInfo(userNo: String, userName: String, userPhotoUrl: String)
 }
