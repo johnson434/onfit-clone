@@ -1,12 +1,12 @@
 plugins {
     kotlin("kapt")
     id("java-library")
-    id("org.jetbrains.kotlin.jvm") version "1.7.20" apply false
+    id("org.jetbrains.kotlin.jvm")
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_18
-    targetCompatibility = JavaVersion.VERSION_18
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 val mockkVersion = "1.13.9"
