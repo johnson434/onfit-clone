@@ -1,3 +1,4 @@
+// setting.gradle
 pluginManagement {
     repositories {
         google()
@@ -18,3 +19,4 @@ include(":app")
 include(":domain")
 include(":data")
 include(":ui")
+include(":common")
