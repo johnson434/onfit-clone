@@ -1,4 +1,4 @@
-package com.hig.domain.usecase
+package com.hig.domain.usecase.user
 
 import com.hig.common.exception.UserNotFoundException
 import com.hig.domain.data.repository.UserRepository
