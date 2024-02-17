@@ -2,7 +2,7 @@ package com.hig.domain.usecase.user
 
 import com.hig.common.exception.UserNotFoundException
 import com.hig.common.model.UserDto
-import com.hig.domain.data.repository.UserRepository
+import com.hig.domain.data.repository.user.UserRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

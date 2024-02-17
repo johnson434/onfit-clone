@@ -1,4 +1,4 @@
-package com.hig.domain.data.repository
+package com.hig.domain.data.repository.user
 
 import com.hig.common.model.UserDto
 import java.io.File

@@ -1,7 +1,7 @@
 package com.hig.domain.usecase.user
 
 import com.hig.common.exception.UserNotFoundException
-import com.hig.domain.data.repository.UserRepository
+import com.hig.domain.data.repository.user.UserRepository
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.test.runTest
