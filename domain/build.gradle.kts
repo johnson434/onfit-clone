@@ -1,7 +1,7 @@
 plugins {
     kotlin("kapt")
     id("java-library")
-    id("org.jetbrains.kotlin.jvm")
+    id("org.jetbrains.kotlin.jvm") version "1.7.20" apply false
 }
 
 java {
