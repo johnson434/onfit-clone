@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.hig.ui"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -15,7 +15,7 @@ android {
     }
 
     buildFeatures {
-        compose = true
+//        compose = true
     }
 
     buildTypes {
@@ -28,32 +28,24 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.9"
+    }
+
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "18"
     }
 }
 
 dependencies {
-    val composeBom = platform("androidx.compose:compose-bom:2023.01.00")
-    implementation(composeBom)
-    androidTestImplementation(composeBom)
-
-    // Choose one of the following:
-    // Material Design 3
-    implementation("androidx.compose.material3:material3")
-    // Android Studio Preview support
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    // Optional - Integration with ViewModels
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+//    implementation("androidx.compose.ui:ui:1.6.1")
+//    implementation("androidx.compose.runtime:runtime:1.6.1")
+//    implementation("androidx.compose.foundation:foundation:1.6.1")
+//    implementation("androidx.compose.animation:animation:1.6.1")
+//    implementation("androidx.compose.material:material:1.6.1")
+//    implementation("androidx.compose.material3:material3:1.2.0")
 }
